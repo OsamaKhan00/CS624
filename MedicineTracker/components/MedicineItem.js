@@ -6,7 +6,7 @@ const MedicineItem = ({ medicine }) => {
     <View style={styles.container}>
       <Text style={styles.medicineName}>{medicine.name}</Text>
       <Text style={styles.medicineDose}>{medicine.dose}</Text>
-      <Text style={styles.medicineTime}>{`Time: ${medicine.time.toLocaleTimeString()}`}</Text>
+      <Text style={styles.medicineTime}>{`Time: ${new Date(medicine.time).toLocaleTimeString()}`}</Text>
     </View>
   );
 };
